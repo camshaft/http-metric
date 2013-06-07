@@ -1,0 +1,20 @@
+{
+  "name": "http-metric",
+  "version": "0.1.0",
+  "description": "Measure HTTP requests",
+  "main": "index.js",
+  "scripts": {
+    "test": "NODE_ENV=test mocha"
+  },
+  "repository": "",
+  "author": "Cameron Bytheway <cameron@theflokk.com>",
+  "license": "MIT",
+  "dependencies": {
+    "metric-log": "~0.2.4"
+  },
+  "devDependencies": {
+    "should": "~1.2.2",
+    "mocha": "~1.10.0",
+    "superagent": "~0.14.7"
+  }
+}
