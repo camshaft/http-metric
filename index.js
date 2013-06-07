@@ -35,7 +35,10 @@ function request(mod, proto) {
 
     // Listen for the response and log the metric
     req.once('response', function(res) {
-      prof({code: res.statusCode});
+      var profOpts = {code: res.statusCode};
+      if(res.headers['content-length']) profOpts.content_length = res.headers['content-length'];
+      if(res.headers['x-request-id']) profOpts.request_id = res.headers['x-request-id'];
+      prof(profOpts);
     });
 
     // Register the callback after ours
